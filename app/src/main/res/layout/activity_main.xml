@@ -1,14 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
+    <LinearLayout
+        android:id="@+id/dice_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+    <ImageView
+        android:layout_marginEnd="32dp"
+        android:id="@+id/dice1"
+        android:src="@drawable/dice_6"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+   <ImageView
+       android:layout_marginStart="32dp"
+       android:id="@+id/dice2"
+       android:src="@drawable/dice_1"
+       android:layout_width="160dp"
+       android:layout_height="160dp"
+       app:layout_constraintStart_toEndOf="@id/dice1"
+       app:layout_constraintTop_toTopOf="@id/dice1"
+       app:layout_constraintBottom_toBottomOf="@id/dice1"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/feeling"
+        android:layout_marginTop="32dp"
+        android:textSize="32sp"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="@id/roll_btn"
+        app:layout_constraintStart_toStartOf="@id/roll_btn"
+        app:layout_constraintTop_toBottomOf="@id/roll_btn"
+        android:text="feeling lucky?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_marginTop="32dp"
+        android:id="@+id/roll_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I fell lucky"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="@id/dice_group"
+        app:layout_constraintStart_toStartOf="@id/dice_group"
+        app:layout_constraintTop_toBottomOf="@id/dice_group" />
 
 
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
