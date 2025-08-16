@@ -26,6 +26,8 @@ android {
             )
         }
     }
+
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -34,7 +36,9 @@ android {
         jvmTarget = "11"
     }
 }
-
+//repositories {
+//    maven(url = "<https://jitpack.io>")
+//}
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -45,4 +49,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("com.github.LottieFiles:+")
+
+
 }

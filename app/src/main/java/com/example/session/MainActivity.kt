@@ -44,12 +44,13 @@ class MainActivity : AppCompatActivity() {
         }
         val resultText: TextView = findViewById(R.id.feeling)
         val animator = ValueAnimator.ofArgb(Color.RED, Color.BLUE, Color.GREEN)
-        animator.duration = 4000
+        animator.duration = 5000
         animator.repeatCount = ValueAnimator.INFINITE
         animator.addUpdateListener { animation ->
             resultText.setTextColor(animation.animatedValue as Int)
         }
         animator.start()
+
 
 
     }
