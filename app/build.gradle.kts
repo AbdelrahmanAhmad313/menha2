@@ -49,7 +49,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation("com.github.LottieFiles:+")
+    implementation("com.airbnb.android:lottie:+")
 
 
 }
